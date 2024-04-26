@@ -1,3 +1,11 @@
+// Write program using for loop to produce the output on the right
+// 1
+// -2
+// 3
+// -4
+// 5
+// -6
+// 7
 #include <stdio.h>
 #include <ctype.h>
 #include <math.h>
