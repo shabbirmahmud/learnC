@@ -14,9 +14,9 @@
 #include <time.h>
 int main()
 {
-    for (int i = 1; i < 16; i++)
+    for (int i = 1; i < 15; i++)
     {
-        printf("%d\n", i % 4 * 3 + 2);
+        printf("%d ", i % 4 * 3 + 2);
     }
 
     return 0;
