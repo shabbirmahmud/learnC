@@ -2,16 +2,22 @@
 #include <string.h>
 int main()
 {
-    int i, len;
-    char w[99];
-    scanf("%d", &i);
-    for (int j = 1; j <= i; j++)
+    int n;
+    char word[101];
+    scanf("%d", &n);
+    if (n >= 1 && n <= 100)
     {
-        len = strlen(w);
+        for (int i = 0; i < n; i++)
+        {
+            scanf("%s", word);
+            if (strlen(word) > 10)
+            {
+                printf("%c%ld%c\n", word[0], strlen(word) - 2, word[strlen(word) - 1]);
+            }
+            else
+            {
+                printf("%s\n", word);
+            }
+        }
     }
-    if (len > 10)
-    {
-        printf("%c%d%c", w[0], len - 2, w[len - 1]);
-    }
-    return 0;
 }

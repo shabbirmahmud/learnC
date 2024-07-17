@@ -1,19 +1,17 @@
 #include <stdio.h>
-#include <ctype.h>
-#include <math.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
 int main()
 {
-    for (int F1 = 0, F2 = 1, F3 = 1, F = F1 + F2 + F3, printf("%d %d %d", F1, F2, F3); F <= 24)
+    int n;
+    int P, S, Q;
+    int num = 0;
+    printf("The number of problems in the contest :");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
     {
-        printf(" %d", F);
-        F1 = F2;
-        F2 = F3;
-        F3 = F;
-        F = F1 + F2 + F3;
+        scanf("%d %d %d", &P, &S, &Q);
+        if ((P && Q == 1) || (P && S == 1) || (S && Q == 1) || (P && Q && S == 1))
+            num++;
     }
-
+    printf("\n%d\n", num);
     return 0;
 }
